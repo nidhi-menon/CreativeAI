@@ -15,16 +15,16 @@ void addAll(Segment[] arr, ArrayList<Segment> list) {
 void setup() {
   size(800, 800);
   segments = new ArrayList<Segment>();
-  PVector a = new PVector(100, 300);
-  PVector g = new PVector(550, 300);
-  PVector d = new PVector(1000, 300);
+  PVector a = new PVector(200, 300);
+  PVector g = new PVector(400, 300);
+  PVector d = new PVector(600, 300);
 
   float len = PVector.dist(a, g);
-  float h = len * sqrt(3) / 2;
-  PVector b = new PVector(325, 300-h);
-  PVector c = new PVector(775, 300-h);
-  PVector e = new PVector(775, 300+h);
-  PVector f = new PVector(325, 300+h);
+  float ht = len * sqrt(3) / 2;
+  PVector b = new PVector(300, 300-ht);
+  PVector c = new PVector(500, 300-ht);
+  PVector e = new PVector(500, 300+ht);
+  PVector f = new PVector(300, 300+ht);
   
   Segment s1 = new Segment(a, b);
   Segment s2 = new Segment(b, c);
