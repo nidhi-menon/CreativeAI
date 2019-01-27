@@ -13,18 +13,19 @@ void addAll(Segment[] arr, ArrayList<Segment> list) {
 }
 
 void setup() {
-  size(1400, 800);
+  size(800, 800);
   segments = new ArrayList<Segment>();
-  PVector a = new PVector(100, 300);
-  PVector g = new PVector(550, 300);
-  PVector d = new PVector(1000, 300);
+  PVector a = new PVector(200, 300);
+  PVector g = new PVector(400, 300);
+  PVector d = new PVector(600, 300);
 
   float len = PVector.dist(a, g);
-  float h = len * sqrt(3) / 2;
-  PVector b = new PVector(325, 300-h);
-  PVector c = new PVector(775, 300-h);
-  PVector e = new PVector(775, 300+h);
-  PVector f = new PVector(325, 300+h);
+  float ht = len * sqrt(3) / 2;
+  
+  PVector b = new PVector(300, 300-ht);
+  PVector c = new PVector(500, 300-ht);
+  PVector e = new PVector(500, 300+ht);
+  PVector f = new PVector(300, 300+ht);
   
   Segment s1 = new Segment(a, b);
   Segment s2 = new Segment(b, c);
@@ -32,18 +33,21 @@ void setup() {
   Segment s4 = new Segment(d, e);
   Segment s5 = new Segment(e, f);
   Segment s6 = new Segment(f, a);
-  Segment s7 = new Segment(a, g);
-  Segment s8 = new Segment(b, g);
-  Segment s9 = new Segment(c, g);
-  Segment s10 = new Segment(d, g);
-  Segment s11 = new Segment(e, g);
-  Segment s12 = new Segment(f, g);
-  Segment s13 = new Segment(g, a);
-  Segment s14 = new Segment(g, b);
-  Segment s15 = new Segment(g, c);
-  Segment s16 = new Segment(g, d);
-  Segment s17 = new Segment(g, e);
-  Segment s18 = new Segment(g, f);
+  
+  Segment s7 = new Segment(a, c);
+  Segment s8 = new Segment(c, a);
+  Segment s9 = new Segment(c, e);
+  Segment s10 = new Segment(e, c);
+  Segment s11 = new Segment(a, e);
+  Segment s12 = new Segment(e, a);
+  
+  Segment s13 = new Segment(b, d);
+  Segment s14 = new Segment(d, b);
+  Segment s15 = new Segment(d, f);
+  Segment s16 = new Segment(f, d);
+  Segment s17 = new Segment(b, f);
+  Segment s18 = new Segment(f, b);
+  
   segments.add(s1);
   segments.add(s2);
   segments.add(s3);
@@ -62,6 +66,12 @@ void setup() {
   segments.add(s16);
   segments.add(s17);
   segments.add(s18);
+  //segments.add(s19);
+  //segments.add(s20);
+  //segments.add(s21);
+  //segments.add(s22);
+  //segments.add(s23);
+  //segments.add(s24);
 
   //println(children);
 }
